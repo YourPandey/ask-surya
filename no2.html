@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pleaseee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Pleading GIF -->
+        <img src="https://media.tenor.com/t33B_L-o40gAAAAi/tkthao219-peach.gif" alt="Pleading Cat">
+        <h1>Ek aur baar Soch lo! 😭</h1>
+        <p>Pandey ji request kar rahe hain...</p>
+        
+        <a href="yes.html" class="btn yes">Yes</a>
+        <button id="no-btn" class="btn no" style="position: relative;">No</button>
+    </div>
+
+    <script>
+        const noButton = document.getElementById("no-btn");
+
+        noButton.addEventListener("mouseover", () => {
+            // Get window dimensions
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+            
+            // Calculate random positions (keeping the button inside the screen)
+            const randomX = Math.floor(Math.random() * (windowWidth - 100));
+            const randomY = Math.floor(Math.random() * (windowHeight - 50));
+            
+            // Apply new positions
+            noButton.style.position = "absolute";
+            noButton.style.left = randomX + "px";
+            noButton.style.top = randomY + "px";
+        });
+    </script>
+</body>
+</html>
